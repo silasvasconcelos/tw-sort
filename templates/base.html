@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>TW Sort</title>
+		<meta name="developer-name" content="Silas Vasconcelos" />
+		<meta name="developer-email" content="contato@silasvasconcelos.com.br" />
+		<meta name="developer-site" content="http://silasvasconcelos.com.br" />
+		<link rel="icon" type="image/x-icon" href="{{ url_for("static", filename="images/favicon.ico") }}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="{{ url_for("static", filename="css/bootstrap.min.css") }}" rel="stylesheet">
+		<link href="{{ url_for("static", filename="css/animate.css") }}" rel="stylesheet">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="{{ url_for("static", filename="css/styles.css") }}" rel="stylesheet">
+	</head>
+	<body>
+	<nav class="navbar navbar-fixed-top header">
+	 	<div class="col-md-12">
+	        <div class="navbar-header">
+	          
+	          <a href="#" class="navbar-brand"><i class="fa fa-twitter"></i> TW Sort</a>
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse1">
+	          <i class="fa fa-search"></i>
+	          </button>
+	      
+	        </div>
+	        <div class="collapse navbar-collapse" id="navbar-collapse1">
+	          <div class="navbar-form pull-left">
+	              <div class="input-group" style="max-width:470px;">
+	                <input type="text" class="form-control" placeholder="Buscar..." id="search-tw">
+	                <div class="input-group-btn">
+	                  <button class="btn btn-default btn-primary" type="buttom" id="search-tw-btn"><i class="fa fa-search"></i></button>
+	                </div>
+	              </div>
+	          </div>
+	          <ul class="nav navbar-nav navbar-right">
+	             <li><a href="javascript:void(0);" id="about">Sobre o TW Sort</a></li>
+	           </ul>
+	        </div>	
+	     </div>	
+	</nav>
+
+	<!--main-->
+	<div class="container" id="main">
+		
+		{% block content %}
+		{% endblock content %}
+
+		<div class="clearfix"></div>
+	</div><!--/main-->
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="{{ url_for("static", filename="js/jquery.linkify.min.js") }}"></script>
+		<script src="{{ url_for("static", filename="js/bootstrap.min.js") }}"></script>
+		<script src="{{ url_for("static", filename="js/scripts.js") }}"></script>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="modal-alerts" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="text-danger">&times;</span></button>
+	        <h4 id="modal-title"></h4>
+	      </div>
+	      <div class="modal-body" id="modal-content">
+	      </div>
+	      <div class="modal-footer"><hr></div>
+	    </div>
+	  </div>
+	</div>
+	</body>
+</html>

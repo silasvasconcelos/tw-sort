@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <div class="panel panel-default" id="painel-sort">
+          <div class="panel-body">
+            
+              <ul class="list-unstyled list-inline alert-here">
+                <li><input type="number" class="form-control" id="sort-num" placeholder="Quantidade a sortear"></li>    
+                <li><button type="buttom" class="btn btn-success" id="sort" disabled="disabled"><i class="fa fa-arrow-clicle-o-right"></i> Sortear</button></li>
+              </ul>
+              
+              <div class="row" id="row-content-sort">
+              </div>
+
+          </div>
+        </div>
+
+      <div class="row" id="row-content">
+
+
+        <div class="col-md-12">
+          <i class="fa fa-twitter twitter-big"></i>
+          <h2 class="tw-balon">Pesquise por #hashtags, @usuário e e.t.c, e sortei um ou mais vencedores!</h2>
+        </div>
+         
+      </div>
+
+{% endblock content %}
